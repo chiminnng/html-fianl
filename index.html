@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
@@ -196,7 +197,7 @@
     <div class="container text-center">
         <div class="header-title">
             <h1 class="display-5 fw-bold">朋友間分帳好工具</h1>
-            <p class="lead mb-1" id="groupNameDisplay">好兄弟精準清算系統</p>
+            <p class="lead mb-1" id="groupNameDisplay" style="display:none;"></p>
             <span id="syncStatus" class="sync-loading">⏳ 連線中...</span>
         </div>
     </div>
@@ -426,7 +427,7 @@
         document.getElementById('appPage').style.display = 'block';
 
         // 更新 UI
-        document.getElementById('groupNameDisplay').textContent = name + " — 好兄弟精準清算";
+        document.getElementById('groupNameDisplay').textContent = name;
         document.getElementById('groupNameBar').textContent = name;
         document.getElementById('groupCodeBar').textContent = code;
 
