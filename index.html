@@ -161,7 +161,7 @@
         <!-- 建立新群組 -->
         <div class="mb-3">
             <label class="form-label fw-bold text-secondary small">群組名稱（選填）</label>
-            <input type="text" id="newGroupName" class="form-control" placeholder="例：墾丁旅遊、六月聚餐…">
+            <input type="text" id="newGroupName" class="form-control" placeholder="例：墾丁旅遊、十一月聚餐…">
         </div>
         <button class="btn btn-custom w-100 fw-bold py-2" onclick="createGroup()">🚀 建立新群組</button>
 
@@ -196,6 +196,7 @@
     <div class="container text-center">
         <div class="header-title">
             <h1 class="display-5 fw-bold">朋友間分帳好工具</h1>
+            <p class="lead mb-1" id="groupNameDisplay">好兄弟精準清算系統</p>
             <span id="syncStatus" class="sync-loading">⏳ 連線中...</span>
         </div>
     </div>
@@ -737,13 +738,19 @@
     // ════════════════════════════════════════
     //  頁面載入：自動恢復 session
     // ════════════════════════════════════════
-    window.onload = function() {
+    function initApp() {
         const savedCode = sessionStorage.getItem('groupCode');
         const savedName = sessionStorage.getItem('groupName');
         if (savedCode) {
             loadGroup(savedCode, savedName || "群組");
         }
-    };
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+        initApp();
+    }
 </script>
 
 </body>
