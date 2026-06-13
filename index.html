@@ -218,7 +218,7 @@
 
         <!-- 成員管理 -->
         <div class="card mb-4">
-            <div class="card-header text-dark">👥 1. 群組成員管理</div>
+            <div class="card-header text-dark">👥 群組成員管理</div>
             <div class="card-body">
                 <div class="row align-items-center">
                     <div class="col-md-5 mb-3 mb-md-0">
@@ -239,7 +239,7 @@
             <!-- 記帳輸入區 -->
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header text-primary" id="formHeader">✍️ 2. 記帳輸入區</div>
+                    <div class="card-header text-primary" id="formHeader">✍️ 記帳輸入區</div>
                     <div class="card-body">
                         <div class="mb-3">
                             <label class="form-label fw-bold">消費日期：</label>
@@ -272,7 +272,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header text-success d-flex justify-content-between align-items-center">
-                        <span>📋 3. 當月消費明細</span>
+                        <span>📋 當月消費明細</span>
                         <button class="btn btn-sm btn-outline-danger py-0" onclick="clearAllData()">⚠️ 清除所有紀錄</button>
                     </div>
                     <div class="card-body" style="max-height: 380px; overflow-y: auto;">
@@ -282,7 +282,7 @@
                                     <th style="width:15%">日期</th>
                                     <th style="width:25%">項目</th>
                                     <th style="width:15%">總額</th>
-                                    <th style="width:15%">代墊人</th>
+                                    <th style="width:15%">付款人</th>
                                     <th style="width:20%">分帳概況</th>
                                     <th style="width:10%">🔧</th>
                                 </tr>
@@ -295,6 +295,7 @@
                 <div class="card">
                     <div class="card-header text-danger"></div>
                     <div class="card-body text-center">
+					<div class="card-header text-danger">💰 總結</div>
                         <p class="text-muted small">點擊下方按鈕，自動計算出最省手續費的還錢方法。</p>
                         <button class="btn btn-danger w-100 fw-bold mb-3" onclick="calculateSettlement()">⚡ 開始年底/月底大清算</button>
                         <div id="settlementResult" style="display:none;" class="text-start">
