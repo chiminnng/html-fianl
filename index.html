@@ -604,7 +604,7 @@
         const tbody = document.getElementById('historyTable');
         tbody.innerHTML = "";
         txList.forEach((r, index) => {
-            const displayKeys = Object.keys(r.shares || {}).filter(k => members.includes(k));
+            const displayKeys = Object.keys(r.shares || {}).filter(k => (r.shares[k] || 0) > 0);
             const shareText = displayKeys.map(m => `${m}:${Math.round(r.shares[m] || 0)}`).join(' | ');
             tbody.innerHTML += `<tr>
                 <td class="small text-muted">${r.date.substring(5)}</td>
